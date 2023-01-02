@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table.center {
+      width:20%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      background-image: url("https://scr.vn/wp-content/uploads/2020/07/N%C3%BAi-ph%C3%BA-S%C4%A9-v%C3%A0o-xu%C3%A2n-scaled-2048x1152.jpg");
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+  <script src="login.js"></script>
+</head>
+<body style="text-align: center">
+<div>
+  <table border="2px" class="center">
+    <h2>Form LogIn</h2>
+    <tr>
+      <td>
+        <label for="userName"><h3>UserName</h3></label>
+        <input type="text" id="userName" name="login" placeholder="Enter UserName" size="25px"><br>
+        <label for="passWord"><h3>PassWord</h3></label>
+        <input type="password" id="passWord" name="Login" placeholder="Enter PassWord" size="25px"><br><br>
+        <input type="button" id="submit" onclick="signIn()" value="submit"/>
+      </td>
+    </tr>
+  </table>
+</div>
+<canvas id="myCanvas" width="2000px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+  function Circle(x, y, radius){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex(){
+    return Math.floor(Math.random()*255);
+  }
+  function getRandomColor(){
+    let pink = getRandomHex();
+    let yellow = getRandomHex();
+    let orange = getRandomHex();
+    let berry = getRandomHex();
+    return "rgb(" + pink + "," + yellow + "," + orange + "," + berry + ")";
+  }
+  function createCircle(){
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let radius = Math.floor(Math.random() * 80);
+    let color = getRandomColor();
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let circle= new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  function createMultipleCircle(){
+    for(let i = 0; i < 80; i++){
+      createCircle();
+    }
+  }
+  createMultipleCircle();
+</script>
+</html>

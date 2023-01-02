@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="manage.css">
+  <style>
+   .image #imgss{
+     width: 100%;
+     height: 800px;
+   }
+  </style>
+</head>
+<body onload="main()">
+<div id="header">
+  <h3>Ngọc Tùng</h3>
+  <ul class="nav">
+    <li><a href="">Home</a></li>
+    <li><a href="">Select Flower</a>
+      <ul class="navmore">
+        <li onclick="peachBlossom()"><a href="#content">Hoa Đào</a></li>
+        <br>
+        <li onclick="orchid()"><a href="#content">Hoa Lan</a></li>
+        <br>
+        <li onclick="Geberra()"><a href="#content">Hoa Đồng tiền</a></li>
+        <br>
+        <li onclick="chrysanThemum()"><a href="#content">Hoa Cúc</a></li>
+        <br>
+        <li onclick="lilies()"><a href="#content">Hoa Ly</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div id="btn">
+    <a id="login" href="login.html"> login </a>
+    <input type="button" id="exitt" onclick="logOut()" value="LOG-UOT">
+    <a href="#taomoi"> <input type="button" id="addproduct" onclick="add()" value="ADD"></a>
+  </div>
+</div>
+<div class="image">
+  <img id="imgss" onclick="changeImage()" src="https://truyencotich.vn/wp-content/uploads/2015/02/alotin.vn_1404268873_7f40ee2edaf45ba1a70bd9a5e4d333a3.jpg" alt="">
+  </div>
+<a>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/5e_LJC82RCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h3>Nhạc têt 2023</h3>
+</a>
+<div id="main">
+  <div id="content">
+    <h4 id="text-content"> Happ New Year 2023</h4>
+    <h2 id="sub-content"> Chúc mừng năm mới, an khang thịnh vượng, phát tài phát lộc </h2>
+  </div>
+  <div id="moreProduct"  style="margin-left:10%;
+                            display: none;
+">
+    <p>nhập link ảnh</p>
+    <label> <input type="text" value="" id="img"
+                   style="padding: 4px 20px;
+    border-radius: 5px;
+"
+    > </label><br>
+    <br>
+    <p>Tên hoa</p>
+    <label for="name"> <input type="text" value="" id="name"
+                                   style="padding: 4px 20px;
+                                          border-radius: 5px;
+"
+    > </label> <br>
+    <br>
+    <p> Giá hoa </p>
+    <label for="price"> <input type="text" value="" id="price"
+                             style="padding: 4px 20px;
+                             border-radius: 5px;
+"
+    > </label> <br>
+    <br>
+    <input class="submitt" type="submit" onclick="uploadproduct()" />
+  </div>
+  <table>
+    <tr></tr>
+  </table>
+  <div id="productMain"></div>
+  <div id="footer">
+    <h4 id="textInFor">Thành Phố Nam Định</h4><br>
+    <h4 class="subInFor">Địa chỉ liên hệ: Đường 487 Cầu Đá Nam Định</h4><br>
+    <h4 class="subInFor">TellPhone: 0222681681 </h4>
+  </div>
+</div>
+<script src="manageFlower.js"></script>
+<script src="login.js"></script>
+</body>
+<script>
+  let index =1 ;
+  changeImage = function(){
+    let imgs = ["https://www.fao.org.vn/wp-content/uploads/2020/08/cac-loai-hoa-tet-de-trong.jpg","https://live.staticflickr.com/1454/25243491075_eefa4095d4.jpg","https://i.etsystatic.com/5191233/r/il/2de4cc/1164523232/il_794xN.1164523232_28nd.jpg","https://charispsallo.files.wordpress.com/2018/05/almond-flowering-light-ch-rs-img_4195.jpg?w=640","https://dichothongminh.com/wp-content/uploads/2021/03/hoa-anh-dao-3.jpeg","https://thumbs.dreamstime.com/b/beautiful-pink-cherry-blossom-soft-focus-vivid-color-cherry-b-beautiful-pink-cherry-blossom-soft-focus-vivid-color-cherry-109026618.jpg","https://thumbs.dreamstime.com/b/beautiful-pink-cherry-blossom-soft-focus-vivid-color-cherry-blossom-pink-sakura-flower-flowering-once-year-pu-lom-lo-109026623.jpg"];
+    document.getElementById("imgss").src = imgs[index];
+    index++;
+    if(index == 7){
+      index = 0;
+    }
+  }
+  setInterval(changeImage,2000);
+</script>
+</html>

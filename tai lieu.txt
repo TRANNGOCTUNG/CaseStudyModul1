@@ -1,0 +1,161 @@
+let daoArr = [
+    new ManageFlower('https://workfromhome.vn/wp-content/uploads/2021/09/cac-loai-hoa-dao-1.jpg',"Đào Phai", 200000),
+    new ManageFlower('https://workfromhome.vn/wp-content/uploads/2021/09/cac-loai-hoa-dao-2.jpg',"Bích Đào",200000),
+    new ManageFlower('https://workfromhome.vn/wp-content/uploads/2021/09/cac-loai-hoa-dao-3.jpg',"Bạch Đào",200000),
+    new ManageFlower('https://workfromhome.vn/wp-content/uploads/2021/09/cac-loai-hoa-dao-4.jpg',"Đào Thất Thốn",200000),
+    new ManageFlower('https://cdn.vatgia.com/pictures/thumb/w750/2022/12/1671435023-onl.jpg',"Đào Đông Đỏ",10000000)
+];
+// Hoa Lan;
+let lanArr = [
+    new Flower('https://th.bing.com/th/id/R.4bb3e7cdc39107b08ce6dbe6e3e03327?rik=i61BfDHe6wzIHQ&pid=ImgRaw&r=0',"Lan Hồ Điệp",2000000),
+    new Flower('https://toplist.vn/images/800px/lan-chu-dinh-160906.jpg',"Lan Chu Đình",2000000),
+    new Flower('https://toplist.vn/images/800px/lan-cam-cu-160853.jpg',"Lan Cẩm CÙ",2000000),
+    new Flower('https://toplist.vn/images/800px/lan-dendro-160746.jpg',"Lan Dendro",2000000),
+    new Flower('https://toplist.vn/images/800px/lan-vanda-160744.jpg',"Lan Vanda",2000000)
+];
+
+//Hoa Đồng Tiền;
+let dongTienArr = [
+    new Flower('https://ganhhanghoa.vn/wp-content/uploads/2020/12/y-nghia-cua-hoa-dong-tien-do.jpg',"Hoa Đồng Tiền Đỏ",300000),
+    new Flower('https://ganhhanghoa.vn/wp-content/uploads/2020/12/y-nghia-hoa-dong-tien-vang.jpg',"Hoa Đồng Tiền Vàng",300000)
+];
+
+// Hoa Cúc;
+let cucArr = [
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep.jpg',"Cúc Mâm Xôi",500000),
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep-cuc-hoa-mi-e1535363735242.jpg',"Cúc Họa Mi",500000),
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep-cuc-van-tho-e1535363843841.jpg',"Cúc Vạn Thọ",500000),
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep-dong-tien-e1535364213983.jpg',"Cúc Đồng Tiền",500000),
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep-thach-thao-e1535364316735.jpg',"Cúc Thạch Thảo",500000),
+];
+
+//Hoa ly;
+let lyArr = [
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/5fa8027a98b96.jpg',"Ly Hồng",1000000000),
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/lily-trang.jpg',"Ly Trắng",1000000000),
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/lily-trang.jpg',"Ly Đỏ",1000000000),
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/lily-trang.jpg',"Ly Cam",1000000000),
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/lily-vang.jpg',"Ly Vàng",1000000000)
+];
+let allArr = [
+    new ManageFlower('https://workfromhome.vn/wp-content/uploads/2021/09/cac-loai-hoa-dao-1.jpg',"Đào Phai",200000),
+    new Flower('https://th.bing.com/th/id/R.4bb3e7cdc39107b08ce6dbe6e3e03327?rik=i61BfDHe6wzIHQ&pid=ImgRaw&r=0',"Lan Hồ Điệp",2000000),
+    new Flower('https://ganhhanghoa.vn/wp-content/uploads/2020/12/y-nghia-cua-hoa-dong-tien-do.jpg',"Hoa Đồng Tiền Đỏ",300000),
+    new Flower('https://blog.flowercorner.vn/wp-content/uploads/2018/08/cac-loai-hoa-cuc-dep.jpg',"Cúc Mâm Xôi",500000),
+    new Flower('https://iuhoa.com/wp-content/uploads/2020/11/5fa8027a98b96.jpg',"Ly Hồng",1000000000)
+]
+
+
+ <style>
+    table.center {
+      width:20%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      background-image: url("https://scr.vn/wp-content/uploads/2020/07/N%C3%BAi-ph%C3%BA-S%C4%A9-v%C3%A0o-xu%C3%A2n-scaled-2048x1152.jpg");
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body style="text-align: center">
+<div>
+<table border="2px" class="center">
+  <h2>Form LogIn</h2>
+  <tr>
+    <td>
+      <label for="userName"><h3>UserName</h3></label>
+      <input type="text" id="userName" name="login" placeholder="Enter UserName" size="25px"><br>
+      <label for="passWord"><h3>PassWord</h3></label>
+      <input type="password" id="passWord" name="Login" placeholder="Enter PassWord" size="25px"><br><br>
+      <input type="button" id="submit" onclick="signIn()" value="submit"/>
+    </td>
+  </tr>
+</table>
+</div>
+
+<canvas id="myCanvas" width="2000px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+  function Circle(x, y, radius){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex(){
+    return Math.floor(Math.random()*255);
+  }
+  function getRandomColor(){
+    let pink = getRandomHex();
+    let yellow = getRandomHex();
+    let orange = getRandomHex();
+    let berry = getRandomHex();
+    return "rgb(" + pink + "," + yellow + "," + orange + "," + berry + ")";
+  }
+
+  function createCircle(){
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let radius = Math.floor(Math.random() * 80);
+    let color = getRandomColor();
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let circle= new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  function createMultipleCircle(){
+    for(var i = 0; i < 80; i++){
+      createCircle();
+    }
+  }
+  createMultipleCircle();
+</script>
+
+
+
+<div class="image">
+    <img id="img" onclick="changeImage()" src="https://truyencotich.vn/wp-content/uploads/2015/02/alotin.vn_1404268873_7f40ee2edaf45ba1a70bd9a5e4d333a3.jpg" alt="">
+</div>
+let index =1 ;
+changeImage = function(){
+    let imgs = ["https://www.fao.org.vn/wp-content/uploads/2020/08/cac-loai-hoa-tet-de-trong.jpg","https://live.staticflickr.com/1454/25243491075_eefa4095d4.jpg","https://i.etsystatic.com/5191233/r/il/2de4cc/1164523232/il_794xN.1164523232_28nd.jpg","https://charispsallo.files.wordpress.com/2018/05/almond-flowering-light-ch-rs-img_4195.jpg?w=640"];
+    document.getElementById("img").src = imgs[index];
+    index++;
+    if(index == 4){
+        index = 0;
+    }
+}
+setInterval(changeImage,3000);
+
+<div class="image">
+    <img id="img" onclick="changeImage()" src="https://truyencotich.vn/wp-content/uploads/2015/02/alotin.vn_1404268873_7f40ee2edaf45ba1a70bd9a5e4d333a3.jpg" alt="">
+</di>
+let index =1 ;
+changeImage = function(){
+    let imgs = ["https://www.fao.org.vn/wp-content/uploads/2020/08/cac-loai-hoa-tet-de-trong.jpg","https://live.staticflickr.com/1454/25243491075_eefa4095d4.jpg","https://i.etsystatic.com/5191233/r/il/2de4cc/1164523232/il_794xN.1164523232_28nd.jpg","https://charispsallo.files.wordpress.com/2018/05/almond-flowering-light-ch-rs-img_4195.jpg?w=640"];
+    document.getElementById("img").src = imgs[index];
+    index++;
+    if(index == 4){
+        index = 0;
+    }
+}
+setInterval(changeImage,3000);
+.image img{
+    width: 100%;
+    height: 400px;
+}
+
+https://www.facebook.com/messenger_media/?attachment_id=906570170372955&message_id=mid.%24cAAAADBItHNaLojbGi2FcPFiweHAw&thread_id=100027279285298
+//hoa đào
+https://th.bing.com/th/id/R.87c39adb30f1856b454d0284ad1afe66?rik=2NOaouVJFb0fZw&riu=http%3a%2f%2fblogcaycanh.vn%2fuploads%2fcaycanh%2f1387963893_hoa-dao-ngay-tet.jpg&ehk=oCHvm5aUqEv%2fzoU8XIkkQwIJTeh1vOJeCQ1HrIRdVaM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
+// hoa cúc
+https://th.bing.com/th/id/R.4c4aad4afebdbc28edd6055c03c12330?rik=T9TWXh12P%2bWXpQ&pid=ImgRaw&r=0&sres=1&sresct=1
+/// hoa ly
+https://th.bing.com/th/id/R.ed3b22341c45b3c9ef41fa3e057bd62e?rik=28g5jihMyv0HgA&riu=http%3a%2f%2fxn--u9jvc384sqfwv3f.com%2fwp-content%2fuploads%2f2016%2f05%2f2497405a499ba25a3518856ac8c700bd.png&ehk=7PP0zuqdXya5m02AjynEElzGfcH42SrpUY5hPAvp7eE%3d&risl=&pid=ImgRaw&r=0
+
